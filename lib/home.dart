@@ -16,7 +16,7 @@ class Home extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(
-            flex: 1,
+            flex: 2,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -150,11 +150,44 @@ class Home extends StatelessWidget {
               ],
             ),
           ),
-          Divider(
-            thickness: 1,
-          ),
           Expanded(
             flex: 1,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  width: 100,
+                  height: 1,
+                  decoration: BoxDecoration(
+                    color: Colors.white
+                  ),
+                ),
+                SizedBox(
+                  height: 80,
+                  width: 80,
+                  child: FloatingActionButton(
+                    onPressed: () {},
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    child: Icon(
+                      Icons.sync
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 100,
+                  height: 1,
+                  decoration: BoxDecoration(
+                    color: Colors.white
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            flex: 2,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
