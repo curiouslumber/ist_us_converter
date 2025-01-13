@@ -93,7 +93,7 @@ BEGIN
             VALUE "FileDescription", "ist_us_converter" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "ist_us_converter" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2025 com.example. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2025 com.noelpinto47. All rights reserved." "\0"
             VALUE "OriginalFilename", "ist_us_converter.exe" "\0"
             VALUE "ProductName", "ist_us_converter" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
