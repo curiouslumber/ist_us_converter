@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:ist_us_converter/home.dart';
+import 'package:timezone/data/latest.dart' as tz;
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent, 
+      statusBarColor: Colors.transparent,
       statusBarIconBrightness: Brightness.light,
     ),
   );
+  tz.initializeTimeZones();
 
   runApp(const MyApp());
 }
