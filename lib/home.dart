@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ist_us_converter/controller/time_controller.dart';
+import 'package:ist_us_converter/widgets/time_display.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -37,75 +38,7 @@ class _HomeState extends State<Home> {
                   style: TextStyle(color: Colors.white),
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                spacing: 16,
-                children: [
-                  Container(
-                    height: 100,
-                    width: 50,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        border: Border.all(color: Colors.white, width: 1)),
-                    child: Obx(
-                      () => Text(
-                        timeController.istTime.value.substring(0, 1),
-                        style: TextStyle(color: Colors.white, fontSize: 64.0),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    height: 100,
-                    width: 50,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        border: Border.all(color: Colors.white, width: 1)),
-                    child: Obx(
-                      () => Text(
-                        timeController.istTime.value.substring(1, 2),
-                        style: TextStyle(color: Colors.white, fontSize: 64.0),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    alignment: Alignment.center,
-                    width: 16.0,
-                    child: Text(
-                      ":",
-                      style: TextStyle(color: Colors.white, fontSize: 64.0),
-                    ),
-                  ),
-                  Container(
-                    height: 100,
-                    width: 50,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        border: Border.all(color: Colors.white, width: 1)),
-                    child: Text(
-                      timeController.istTime.value.substring(3, 4),
-                      style: TextStyle(color: Colors.white, fontSize: 64.0),
-                    ),
-                  ),
-                  Container(
-                    height: 100,
-                    width: 50,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        border: Border.all(color: Colors.white, width: 1)),
-                    child: Obx(
-                      () => Text(
-                        timeController.istTime.value.substring(4, 5),
-                        style: TextStyle(color: Colors.white, fontSize: 64.0),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              CustomTimeDisplay(timeController: timeController, type: "ist"),
               Container(
                   height: 50,
                   width: 150,
@@ -174,77 +107,7 @@ class _HomeState extends State<Home> {
                   style: TextStyle(color: Colors.white),
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                spacing: 16,
-                children: [
-                  Container(
-                    height: 100,
-                    width: 50,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        border: Border.all(color: Colors.white, width: 1)),
-                    child: Obx(
-                      () => Text(
-                        timeController.usTime.value.substring(0, 1),
-                        style: TextStyle(color: Colors.white, fontSize: 64.0),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    height: 100,
-                    width: 50,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        border: Border.all(color: Colors.white, width: 1)),
-                    child: Obx(
-                      () => Text(
-                        timeController.usTime.value.substring(1, 2),
-                        style: TextStyle(color: Colors.white, fontSize: 64.0),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    alignment: Alignment.center,
-                    width: 16.0,
-                    child: Text(
-                      ":",
-                      style: TextStyle(color: Colors.white, fontSize: 64.0),
-                    ),
-                  ),
-                  Container(
-                    height: 100,
-                    width: 50,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        border: Border.all(color: Colors.white, width: 1)),
-                    child: Obx(
-                      () => Text(
-                        timeController.usTime.value.substring(3, 4),
-                        style: TextStyle(color: Colors.white, fontSize: 64.0),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    height: 100,
-                    width: 50,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        border: Border.all(color: Colors.white, width: 1)),
-                    child: Obx(
-                      () => Text(
-                        timeController.usTime.value.substring(4, 5),
-                        style: TextStyle(color: Colors.white, fontSize: 64.0),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              CustomTimeDisplay(timeController: timeController, type: "us"),
               Container(
                 height: 50,
                 width: context.width * 0.55,
