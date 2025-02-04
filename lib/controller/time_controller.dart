@@ -5,27 +5,26 @@ class TimeController extends GetxController {
   RxString istTime = "00:00".obs;
   RxString usTime = "00:00".obs;
 
-  RxString selectedTimeZone = "ET".obs;
+  RxString selectedTimeZone = "EST".obs;
 
   Map<String, List<Object>> get timeZones => {
-        "ET": ["Eastern Time (ET)", "-", 4, 0],
-        "EDT": ["Eastern Daylight Time (EDT)", "-", 4, 30],
-        "CT": ["Central Time (CT)", "-", 6, 0],
-        "CDT": ["Central Daylight Time (CDT)", "-", 5, 30],
-        "MT": ["Mountain Time (MT)", "-", 7, 0],
-        "MDT": ["Mountain Daylight Time (MDT)", "-", 6, 30],
-        "PT": ["Pacific Time (PT)", "-", 8, 0],
-        "PDT": ["Pacific Daylight Time (PDT)", "-", 7, 30],
-        "AKT": ["Alaska Time (AKT)", "-", 9, 0],
-        "AKDT": ["Alaska Daylight Time (AKDT)", "-", 8, 30],
-        "HST": ["Hawaii-Aleutian Standard Time (HST)", "+", 10, 0],
-        "HDT": ["Hawaii-Aleutian Daylight Time (HDT)", "+", 9, 30],
-        "AT": ["Atlantic Time (AT)", "-", 3, 0],
-        "ADT": ["Atlantic Daylight Time (ADT)", "-", 2, 30],
+        "EST": ["Eastern Standard Time (EST)", "-", 5, 0],
+        "EDT": ["Eastern Daylight Time (EDT)", "-", 4, 0],
+        "CST": ["Central Standard Time (CST)", "-", 6, 0],
+        "CDT": ["Central Daylight Time (CDT)", "-", 5, 0],
+        "MST": ["Mountain Standard Time (MST)", "-", 7, 0],
+        "MDT": ["Mountain Daylight Time (MDT)", "-", 6, 0],
+        "PST": ["Pacific Standard Time (PST)", "-", 8, 0],
+        "PDT": ["Pacific Daylight Time (PDT)", "-", 7, 0],
+        "AKST": ["Alaska Standard Time (AKST)", "-", 9, 0],
+        "AKDT": ["Alaska Daylight Time (AKDT)", "-", 8, 0],
+        "HST": ["Hawaii Standard Time (HST)", "-", 10, 0],
+        "AST": ["Atlantic Standard Time (AST)", "-", 4, 0],
+        "ADT": ["Atlantic Daylight Time (ADT)", "-", 3, 0],
       };
 
   init() {
-    syncTime("IST", "ET");
+    syncTime("IST", "EST");
   }
 
   void syncTime(String sourceTime, String destTime) {
